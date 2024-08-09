@@ -1,0 +1,293 @@
+/* Estilos generales del sitio web */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6a1b2e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f8f8f8;
+}
+
+/* Estilo para el menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+}
+
+/* Menú desplegable */
+nav.visible {
+    display: block;
+}
+
+/* Estilo para el botón del menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #6a1b2e;
+    }
+
+    nav.visible {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #6a1b2e;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .menu-toggle:hover {
+        background-color: #4a0e1b;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos del contenido */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #6a1b2e;
+}
+
+/* Estilos del formulario */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #6a1b2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #4a0e1b;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #6a1b2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f8f8f8;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Título en la parte posterior de la página */
+footer::before {
+    content: "Booking Musical Ciudad Blanca";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Limitar el tamaño de las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+/* Tamaño de imágenes para pantallas grandes */
+@media (min-width: 1200px) {
+    img {
+        max-width: 700px; /* Tamaño mediano para pantallas grandes */
+    }
+}
+
+/* Tamaño de imágenes para pantallas pequeñas */
+@media (max-width: 768px) {
+    img {
+        max-width: 300px; /* Tamaño pequeño para pantallas pequeñas */
+    }
+}
+
+/* Estilos para resaltar nombres de páginas */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Color de texto por defecto */
+    padding: 10px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Color del texto al pasar el cursor */
+    background-color: #9b1b2e; /* Color de fondo al pasar el cursor */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el cursor */
+}
+
+/* Estilos para el deslizador de imágenes */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Ajusta según el tamaño deseado */
+    margin: auto; /* Centra el deslizador horizontalmente */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center; /* Centra las imágenes verticalmente en el contenedor */
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan de tamaño */
+    display: block; /* Asegura que las imágenes no tengan espacio debajo */
+}
+
+/* Botones de navegación del deslizador */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajustes para el pie de página */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 600px; /* Tamaño para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        max-width: 300px; /* Tamaño para pantallas pequeñas */
+    }
+}

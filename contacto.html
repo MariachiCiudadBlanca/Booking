@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Booking Musical Ciudad Blanca</title>
+    <meta name="description" content="Contacta a Booking Musical Ciudad Blanca para contratar serenatas musicales en Popayán, Cauca. Completa el formulario para que te contactemos o usa nuestros enlaces de WhatsApp, Facebook e Instagram.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contactos</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰ Menú</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="mariachis.html">Mariachis</a></li>
+                <li><a href="trios.html">Tríos Musicales</a></li>
+                <li><a href="cantantes.html">Cantantes</a></li>
+                <li><a href="solistas.html">Músicos Solistas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h1>Contacto</h1>
+            <p>Para contactar con nosotros, puedes usar los siguientes enlaces:</p>
+            <ul>
+                <li><a href="https://wa.me/1234567890" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.facebook.com/tuempresa" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/tuempresa" target="_blank">Instagram</a></li>
+            </ul>
+
+            <p>Si deseas que nos pongamos en contacto contigo, por favor llena el siguiente formulario:</p>
+            <form action="enviar-formulario.php" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Número de Celular:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Booking Musical Ciudad Blanca. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://www.facebook.com/BookingMusical" target="_blank" rel="noopener noreferrer"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/BookingMusical" target="_blank" rel="noopener noreferrer"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
