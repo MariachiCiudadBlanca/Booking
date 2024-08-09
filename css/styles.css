@@ -150,3 +150,55 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     color: #FFD700; /* Cambia el color del título al pasar el cursor */
     text-shadow: 2px 2px 5px #000;
 }
+
+
+/* Sección deslizador de imagenes que va en el home */
+
+/* Slider de Imágenes */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta según el tamaño deseado */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    left: 10px;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    right: 10px;
+}
+
+
