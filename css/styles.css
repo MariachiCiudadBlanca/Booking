@@ -751,6 +751,11 @@ img {
     transition: transform 0.3s, background-color 0.3s;
 }
 
+.repertorio-column ul li:hover {
+    transform: scale(1.0);
+    background-color: #ffe4e1;
+    
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
