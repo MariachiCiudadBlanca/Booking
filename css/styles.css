@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    background-color: #3b0101; /* Color vinotinto */
+    background-color: #3b0101;
+    /* Color vinotinto */
     color: white;
     padding: 10px;
     text-align: center;
@@ -45,20 +46,27 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ac5f5f;
-    color: #FFD700; /* Cambia el color del texto al pasar el cursor */
+    background-color: #ffffff;
+    color: #FFD700;
+    /* Cambia el color del texto al pasar el cursor */
 }
 
 /* Botón de menú desplegable */
 .menu-toggle {
-    display: none; /* Ocultar por defecto */
-    font-size: 20px; /* Reduce el tamaño de la fuente */
+    display: none;
+    /* Ocultar por defecto */
+    font-size: 20px;
+    /* Reduce el tamaño de la fuente */
     cursor: pointer;
     color: white;
-    padding: 2px 8px; /* Ajusta el relleno para reducir el tamaño del botón */
-    background-color: #8B0000; /* Fondo vinotinto */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    border: none; /* Elimina cualquier borde predeterminado */
+    padding: 2px 8px;
+    /* Ajusta el relleno para reducir el tamaño del botón */
+    background-color: #8B0000;
+    /* Fondo vinotinto */
+    border-radius: 4px;
+    /* Bordes ligeramente redondeados */
+    border: none;
+    /* Elimina cualquier borde predeterminado */
 }
 
 /* Estilos responsive */
@@ -72,7 +80,8 @@ nav ul li a:hover {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #3b0101; /* Color vinotinto */
+        background-color: #3b0101;
+        /* Color vinotinto */
         position: absolute;
         top: 100%;
         left: 0;
@@ -104,7 +113,8 @@ footer {
     padding: 8px 0;
     text-align: center;
     width: 100%;
-    margin-top: auto; /* Hace que el footer se pegue al fondo de la página */
+    margin-top: auto;
+    /* Hace que el footer se pegue al fondo de la página */
 }
 
 .footer-icons {
@@ -121,7 +131,8 @@ footer {
 }
 
 .footer-icons a:hover {
-    color: #FFD700;;
+    color: #FFD700;
+    ;
 }
 
 /* Imágenes responsivas */
@@ -132,7 +143,8 @@ img {
 
 /* Estilo adicional para limitar el tamaño de las imágenes */
 .grupo-musical img {
-    max-width: 800px; /* Limita el tamaño máximo en pantallas grandes */
+    max-width: 800px;
+    /* Limita el tamaño máximo en pantallas grandes */
     max-height: 600px;
     margin: 0 auto;
     display: block;
@@ -140,15 +152,10 @@ img {
 
 @media (max-width: 768px) {
     .grupo-musical img {
-        max-width: 100%; /* Ajusta el tamaño en pantallas pequeñas */
+        max-width: 100%;
+        /* Ajusta el tamaño en pantallas pequeñas */
         max-height: 200px;
     }
-}
-
-/* Estilo adicional para resaltar títulos al pasar el cursor */
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-    color: #FFD700; /* Cambia el color del título al pasar el cursor */
-    text-shadow: 2px 2px 5px #000;
 }
 
 
@@ -158,7 +165,8 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 .slider {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Ajusta según el tamaño deseado */
+    max-width: 800px;
+    /* Ajusta según el tamaño deseado */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -201,4 +209,559 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     right: 10px;
 }
 
+/* Animar elementos cuando entran en la vista. */
+/* Estilo para animación de entrada */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
+.animate-on-scroll.visible {
+    opacity: 1;
+}
+
+
+/* Estilo para la sección de Fotos */
+#fotos {
+    padding: 20px;
+    text-align: center;
+}
+
+.fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.fotos-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para la sección de Paquetes */
+#paquetes {
+    padding: 20px;
+    text-align: center;
+}
+
+.paquete-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.paquete {
+    margin: 10px;
+    max-width: 400px;
+}
+
+.paquete img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.paquete p {
+    margin-top: 10px;
+}
+
+
+
+/* Estilo para el Lightbox */
+.lightbox {
+    display: none;
+    /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-top: 100px;  /* Para forzar el centrado de la imagen en pantallas pequeñas */
+    z-index: 999;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Asegura que el lightbox ocupe toda la altura de la pantalla */
+    overflow: hidden;
+    /* Evita el desplazamiento */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo oscuro */
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    /* Ajusta la imagen para que se mantenga dentro del contenedor */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 767px) {
+    .lightbox-content {
+        padding-top: 200px;  /* Para forzar el centrado de la imagen en pantallas pequeñas */
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        /* Asegura que la imagen se ajuste al contenedor */
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+}
+
+.lightbox img {
+    border-radius: 8px;
+}
+
+/* Animación de zoom para el lightbox */
+.lightbox-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Estilo para los controles de navegación */
+.lightbox-prev,
+.lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.lightbox-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* inicio Seccion galería de imagenes mariachi */
+
+/* Estilos para la galería */
+.custom-gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.custom-gallery-item {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden; /* Para asegurar que las imágenes no sobresalgan del contenedor */
+}
+
+.custom-gallery-item img {
+    width: 500px; /* Ajusta este valor para el tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsionar */
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Efecto de transición suave */
+
+}
+
+.custom-gallery-item img:hover {
+    transform: scale(1.1); /* Aumenta la imagen ligeramente al pasar el cursor sobre ella */
+}
+
+/* Estilos para el lightbox */
+.custom-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el lightbox esté sobre otros elementos */
+}
+
+/* Estilos para la imagen en el lightbox */
+.custom-lightbox img {
+    max-width: 80%; /* Ajusta el tamaño máximo al 90% del ancho de la pantalla */
+    max-height: 80%; /* Ajusta el tamaño máximo al 90% de la altura de la pantalla */
+    object-fit: contain; /* Mantiene la proporción de la imagen y la ajusta al contenedor */
+    border-radius: 8px;
+    max-width: 90vw; /* Limita el ancho máximo al 90% del ancho de la ventana */
+    max-height: 90vh; /* Limita la altura máxima al 90% de la altura de la ventana */
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+
+/* Controles para el lightbox */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que los botones estén sobre la imagen */
+}
+
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.custom-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el botón de cerrar esté sobre la imagen */
+}
+
+.custom-close:hover {
+    color: #f00;
+}
+
+/* fin Seccion galería de imagenes mariachi */
+
+
+
+
+/* inicio Sección de Paquetes Ofertados */
+/* Estilos para la sección de paquetes de serenatas */
+.serenata-packages {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reorganiza las imágenes en miniatura */
+    
+}
+
+.serenata-package {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.serenata-package img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.serenata-package:hover img {
+    transform: scale(1.05);
+    border-radius: 8px;
+}
+
+.package-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+}
+
+.serenata-package:hover .package-info {
+    opacity: 1;
+}
+
+/* Estilos para el lightbox */
+#serenata-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Evita que se muestre el fondo fuera del lightbox */
+    
+}
+
+#serenata-lightbox-content {
+    position: relative;
+    width: 90%;
+    max-width: 80vw; /* Ajustado para un tamaño adecuado */
+    max-height: 80vh;
+    background: #724c4c41;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+#serenata-lightbox-image {
+    max-width: 100%;
+    max-height: 70vh; /* Ajustado para un tamaño más adecuado */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+#serenata-lightbox-close,
+#serenata-lightbox-prev,
+#serenata-lightbox-next {
+    position: absolute;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1100; /* Asegura que los botones estén sobre la imagen */
+}
+
+#serenata-lightbox-close {
+    top: 10px;
+    right: 10px;
+}
+
+#serenata-lightbox-prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#serenata-lightbox-next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#serenata-lightbox-close:hover,
+#serenata-lightbox-prev:hover,
+#serenata-lightbox-next:hover {
+    color: #ff0; /* Resalta el color de los botones al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    #serenata-lightbox-close,
+    #serenata-lightbox-prev,
+    #serenata-lightbox-next {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #serenata-lightbox-close,
+    #serenata-lightbox-prev,
+    #serenata-lightbox-next {
+        font-size: 36px; /* Ajuste para pantallas grandes */
+    }
+}
+
+/* fin Sección de Paquetes Ofertados */
+
+
+
+
+
+/* Estilos para la sección hero llamado a la acción de mariachi */
+
+.promo-section {
+    display: flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;      /* Centrar verticalmente */
+    flex-direction: column;   /* Colocar elementos en columna */
+    text-align: center;       /* Centrar el texto */
+    min-height: 30vh;         /* Ajustar altura mínima para reducir espacio */
+    padding: 10px;            /* Reducir espaciado interno */
+    background-color: #f7f7f7; /* Color de fondo de la sección */
+    background-image: url('path/to/your/background-image.jpg'); /* Imagen de fondo */
+    background-size: cover;   /* Cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+}
+
+.promo-section h1 {
+    font-size: 2.5em;         /* Tamaño del texto del título */
+    margin-bottom: 10px;      /* Reducir espaciado debajo del título */
+    color: #800020;           /* Color del texto del título */
+}
+
+.promo-section p {
+    font-size: 1.2em;         /* Tamaño del texto del párrafo */
+    color: #800020;           /* Color del texto del párrafo */
+    max-width: 600px;         /* Ancho máximo del párrafo */
+    margin: 0 auto;          /* Centrar el párrafo horizontalmente */
+}
+
+.promo-section a {
+    display: inline-block;    /* Convertir el enlace en bloque */
+    padding: 10px 20px;       /* Reducir espaciado interno del enlace */
+    margin-top: 10px;         /* Reducir espaciado superior del enlace */
+    background-color: #800020; /* Color de fondo del enlace */
+    color: #ffffff;           /* Color del texto del enlace */
+    text-decoration: none;    /* Quitar subrayado del enlace */
+    border-radius: 5px;       /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Suavizar la transición de color */
+}
+
+.promo-section a:hover {
+    background-color: #a8324b; /* Color de fondo al pasar el cursor */
+}
+
+/* FIN Estilos para la sección hero llamado a la acción de mariachi */
+
+
+/* Estilo para los contenedores de paquetes título de los paquetes  */
+.package-container {
+    display: inline-block; /* Para alinear los paquetes en fila */
+    margin: 10px; /* Espaciado entre paquetes */
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+}
+
+/* Estilo para el título del paquete */
+.package-title {
+    font-size: 1.5em; /* Tamaño del texto */
+    color: #630e05; /* Color vinotinto (ajustar si es necesario) */
+    margin-bottom: 5px; /* Espacio debajo del título */
+    font-weight: bold; /* Hacer el texto más visible */
+    text-align: center; /* Asegura que el título esté centrado */
+    display: block; /* Asegura que el título ocupe todo el ancho */
+}
+
+/* Estilo para las imágenes del paquete */
+.package-image {
+    display: block; /* Para eliminar el espaciado debajo de la imagen */
+    width: 100%; /* Asegurarse de que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para la descripción del paquete */
+.package-description {
+    padding: 10px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto de la descripción */
+    margin-top: 5px; /* Espacio encima de la descripción */
+}
+/* FIN Estilo para los contenedores de paquetes título de los paquetes  */
+
+/*  Sección de Repertorio -->*/
+
+.repertorio-section {
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.repertorio-section h2 {
+    color: #800020;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.repertorio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.repertorio-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.repertorio-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.repertorio-column ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .repertorio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .repertorio-column {
+        max-width: 100%;
+    }
+}
+
+/*  Sección de Repertorio -->*/

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariachis - Booking Musical | Serenatas en Popayán, Cauca</title>
-    <meta name="description" content="Contrata mariachis para tus eventos en Popayán con Booking Musical. Disponibles para serenatas y celebraciones especiales.">
+    <meta name="description"
+        content="Contrata mariachis para tus eventos en Popayán con Booking Musical. Disponibles para serenatas y celebraciones especiales.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/logonegro.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <h1>Mariachis</h1>
@@ -25,18 +28,256 @@
         </nav>
     </header>
     <main>
-        <section class="grupo-musical">
-            <h2>Mariachis</h2>
-            <p>Disfruta de las mejores serenatas con nuestros mariachis en Popayán. Ideal para cualquier tipo de evento y celebración.</p>
-            <img src="images/mariachi1.jpg" alt="Grupo de mariachis en una serenata en Popayán">
-            <img src="images/mariachi2.jpg" alt="Mariachi tocando en una fiesta en Popayán">
+
+        <section class="promo-section">
+            <h1>¡Haz de Tu Evento una Celebración Inolvidable!</h1>
+            <p>Nuestros mariachis en Popayán están listos para llenar tu evento de alegría y música. Elige el paquete que mejor se adapte a tus necesidades y disfruta de un espectáculo sin igual.</p>
+            <a href="https://wa.me/+573105174382"> <i class="fab fa-whatsapp"></i> 310 517 43 82</a>
         </section>
+        
+
+        <section class="serenata-packages">
+            <div class="serenata-package" onclick="openSerenataLightbox(0)">
+                <div class="package-title">Paquete 1</div>
+                <img src="images/MariachiCiudadBlanca.jpg" alt="Paquete de serenata con Mariachi Ciudad Blanca" />
+            </div>
+            <div class="serenata-package" onclick="openSerenataLightbox(1)">
+                <div class="package-title">Paquete 2</div>
+                <img src="images/MariachiPopayan.jpg" alt="Paquete de serenata con Mariachi Popayán" />
+            </div>
+            <div class="serenata-package" onclick="openSerenataLightbox(2)">
+                <div class="package-title">Paquete 3</div>
+                <img src="images/MariachisPopayán.jpg" alt="Paquete de serenata con Mariachis Popayán" />
+            </div>
+            <div class="serenata-package" onclick="openSerenataLightbox(3)">
+                <div class="package-title">Paquete 4</div>
+                <img src="images/MariachiProfesional.jpg" alt="Paquete de serenata con Mariachi Profesional" />
+            </div>
+        </section>
+    
+    
+
+        <!-- Lightbox para imagenes expandidas -->
+    <div id="serenata-lightbox">
+        <div id="serenata-lightbox-content">
+            <span id="serenata-lightbox-close">&times;</span>
+            <img id="serenata-lightbox-image" src="" alt="Imagen ampliada del paquete de mariachi">
+            <span id="serenata-lightbox-prev">&#10094;</span>
+            <span id="serenata-lightbox-next">&#10095;</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+        <!-- inicio de sección de fotos como galería -->
+        <section class="custom-gallery">
+            <h2>Gelería de fotos</h2>
+            <div class="custom-gallery-grid">
+                <!-- Imágenes -->
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-boda.jpg" alt="Grupo de mariachis actuando en una boda elegante"
+                        title="Mariachis en una boda elegante">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-cena.jpg" alt="Mariachis interpretando música en una cena de gala"
+                        title="Mariachis en una cena de gala">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-fiesta-privada.jpg" alt="Grupo de mariachis en una fiesta privada con amigos"
+                        title="Mariachis en una fiesta privada">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-evento-corporativo.jpg"
+                        alt="Mariachis brindando entretenimiento en un evento corporativo"
+                        title="Mariachis en evento corporativo">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-fiestas-de-cumpleanos.jpg"
+                        alt="Mariachis celebrando en una fiesta de cumpleaños" title="Mariachis en fiesta de cumpleaños">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-fiestas-nacionales.jpg"
+                        alt="Mariachis participando en festividades nacionales" title="Mariachis en festividades nacionales">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-reuniones-familiares.jpg"
+                        alt="Grupo de mariachis en una reunión familiar alegre" title="Mariachis en reunión familiar">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-conciertos.jpg" alt="Mariachis realizando un concierto en vivo"
+                        title="Mariachis en concierto en vivo">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-fiestas-empresariales.jpg" alt="Mariachis animando una fiesta empresarial"
+                        title="Mariachis en fiesta empresarial">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-celebraciones-culturales.jpg"
+                        alt="Mariachis tocando durante una celebración cultural tradicional"
+                        title="Mariachis en celebración cultural tradicional">
+                </div>
+        
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-aniversarios.jpg" alt="Mariachis celebrando un aniversario con música alegre"
+                        title="Mariachis en aniversarios">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-eventos-familiares.jpg"
+                        alt="Mariachis creando un ambiente festivo en un evento familiar"
+                        title="Mariachis en eventos familiares">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-quinceaneras.jpg"
+                        alt="Mariachis tocando en una fiesta de quinceañera, creando recuerdos inolvidables"
+                        title="Mariachis en quinceañeras">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-eventos-corporativos.jpg"
+                        alt="Mariachis ofreciendo entretenimiento en un evento corporativo"
+                        title="Mariachis en eventos corporativos">
+                </div>
+
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-bodas.jpg" 
+                         alt="Mariachis tocando música romántica en una boda" 
+                         title="Mariachis en bodas">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-cumpleaños.jpg" 
+                         alt="Mariachis animando un cumpleaños con canciones tradicionales mexicanas" 
+                         title="Mariachis en cumpleaños">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-fiestas-patronales.jpg" 
+                         alt="Mariachis participando en una fiesta patronal con música tradicional" 
+                         title="Mariachis en fiestas patronales">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-desfiles.jpg" 
+                         alt="Mariachis desfilando y tocando música durante un evento cultural" 
+                         title="Mariachis en desfiles">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-eventos-religiosos.jpg" 
+                         alt="Mariachis tocando en un evento religioso con música solemne" 
+                         title="Mariachis en eventos religiosos">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-ceremonias-formales.jpg" 
+                         alt="Mariachis actuando en una ceremonia formal, aportando elegancia y tradición" 
+                         title="Mariachis en ceremonias formales">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-reuniones-sociales.jpg" 
+                         alt="Mariachis animando una reunión social con canciones populares mexicanas" 
+                         title="Mariachis en reuniones sociales">
+                </div>
+                <div class="custom-gallery-item">
+                    <img src="images/mariachis-en-festividades-populares.jpg" 
+                         alt="Mariachis celebrando festividades populares con música alegre" 
+                         title="Mariachis en festividades populares">
+                </div>
+                
+        
+        
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <!-- Lightbox -->
+        <div id="custom-lightbox" class="custom-lightbox">
+            <span class="custom-close">&times;</span>
+            <div class="custom-lightbox-content">
+                <img id="custom-lightbox-img" src="" alt="">
+                <a class="custom-prev">&#10094;</a>
+                <a class="custom-next">&#10095;</a>
+            </div>
+        </div>
+
+
+        <!-- fin de sección de fotos como galería -->
+
+
+        <!-- Sección de Repertorio -->
+        <section id="repertorio" class="repertorio-section">
+            <h2>Repertorio Show Mariachi</h2>
+            <div class="repertorio-grid">
+                <div class="repertorio-column">
+                    <ul>
+                        <li>Amor Eterno (Rocío Durcal)</li>
+                        <li>Ándale (Antonio Aguilar)</li>
+                        <li>Así Fue (Isabel pantoja)</li>
+                        <li>Abrázame muy fuerte (Juan Gabriel)</li>
+                        <li>Bésame Morenita (Pedro Fernández)</li>
+                        <li>Billete Verde (Los Tigres del Norte)</li>
+                        <li>Bohemio De Afición (Vicente Fernández)</li>
+                        <li>Borracho Te Recuerdo (Vicente Fernández)</li>
+                        <li>Caballo De Patas Blancas (Antonio Aguilar)</li>
+                        <li>Cascos Ligeros (Alejandro Fernández)</li>
+                        <!-- ... añade más canciones en la primera columna -->
+                    </ul>
+                </div>
+                <div class="repertorio-column">
+                    <ul>
+                        <li>Como Quien Pierde Una Estrella (Alejandro Fernández)</li>
+                        <li>Copitas De Mezcal (Antonio Aguilar)</li>
+                        <li>Cucurrucucu Paloma (Mariachi)</li>
+                        <li>Cielo Rojo (Flor Silvestre)</li>
+                        <li>El Aventurero (Antonio Aguilar)</li>
+                        <li>El Bravero (Antonio Aguilar)</li>
+                        <li>El Cigarrillo (Ana Gabriel)</li>
+                        <li>Cataclismo (Mariachi)</li>
+                        <li>Como Tu Mujer (Rocío Durcal)</li>
+                        <li>Destino (Rocío Durcal y Juan Gabriel)</li>
+                        <!-- ... añade más canciones en la segunda columna -->
+                    </ul>
+                </div>
+                <div class="repertorio-column">
+                    <ul>
+                        <li>Ay Chabela (Antonio Aguilar)</li>
+                        <li>Hechizo (Ana Gabriel)</li>
+                        <li>Costumbres (Rocío Durcal)</li>
+                        <li>Como La Flor (Selena Quintanilla)</li>
+                        <li>Échale 5 Al Piano (Antonio Aguilar)</li>
+                        <li>El Arracadas (Vicente Fernández)</li>
+                        <li>El Hijo Desobediente (Antonio Aguilar)</li>
+                        <li>El Hijo Del Pueblo (Vicente Fernández)</li>
+                        <li>En Tu Pelo (Javier Solís)</li>
+                        <li>El Amor Más Bonito (Rocío Durcal)</li>
+                        <!-- ... añade más canciones en la tercera columna -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+<!-- FIN Sección de Repertorio -->
+
+
+       
+
+
+        
+
+
+
     </main>
 
     <footer>
         <p>&copy; 2024 Booking Musical Ciudad Blanca. Todos los derechos reservados.</p>
         <div class="social-icons">
-              <div class="footer-icons">
+            <div class="footer-icons">
                 <a href="https://wa.me/+573105174382" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                 </a>
@@ -50,4 +291,5 @@
     </footer>
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
