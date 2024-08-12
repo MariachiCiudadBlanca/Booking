@@ -713,61 +713,76 @@ img {
 }
 /* FIN Estilo para los contenedores de paquetes título de los paquetes  */
 
+
+
 /*  Sección de Repertorio -->*/
 
-.repertorio-section {
-    padding: 40px;
-    background-color: #f5f5f5;
+.repertorio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-.repertorio-section h2 {
-    color: #800020;
+.titulo-repertorio {
     text-align: center;
-    font-size: 28px;
+    color: #800020; /* Vinotinto */
     margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
-.repertorio-grid {
-    display: flex;
-    flex-wrap: wrap;
+.repertorio-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
 }
 
-.repertorio-column {
-    flex: 1;
-    min-width: 250px;
-}
-
-.repertorio-column ul {
+.repertorio-list ul {
     list-style-type: none;
     padding: 0;
 }
 
-.repertorio-column ul li {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 8px;
-    transition: transform 0.3s, background-color 0.3s;
+.repertorio-list li {
+    margin-bottom: 10px;
 }
 
-.repertorio-column ul li:hover {
-    transform: scale(1.05);
-    background-color: #ffe4e1;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .repertorio-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .repertorio-column {
-        max-width: 100%;
+@media screen and (max-width: 768px) {
+    .repertorio-list {
+        grid-template-columns: 1fr;
     }
 }
 
-/*  Sección de Repertorio -->*/
+
+/*  FIN Sección de Repertorio -->*/
+
+
+
+/*  Sección de botón flotante whatsapp  -->*/
+
+/* WhatsApp Floating Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+/*  FIN Sección de botón flotante whatsapp  -->*/
+
